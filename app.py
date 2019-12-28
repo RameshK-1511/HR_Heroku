@@ -23,7 +23,7 @@ def predict():
     else:
         prediction = "High Rate of Promotion"
 
-    return render_template('index.html', prediction_text='Employee Promotion chances: ',prediction)
+    return render_template('index.html', prediction_text='Employee Promotion chances: $ {}'.format(prediction))
 
 
 if __name__ == "__main__":
