@@ -19,6 +19,10 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
+    if pred[0]:
+        prediction = "Low Rate of Promotion"
+    else:
+        prediction = "High Rate of Promotion"
 
     return render_template('index.html', prediction_text='Employee Promoted or not $ {}'.format(output))
 
