@@ -18,13 +18,12 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
-    if pred[0]:
+    if prediction[0]:
         prediction = "Low Rate of Promotion"
     else:
         prediction = "High Rate of Promotion"
 
-    return render_template('index.html', prediction_text='Employee Promoted or not $ {}'.format(output))
+    return render_template('index.html', prediction_text='Employee Promotion chances: ',prediction)
 
 
 if __name__ == "__main__":
